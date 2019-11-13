@@ -1,6 +1,7 @@
 package Decorators;
 
 import VehicleSpecs.Optional;
+import VehicleSpecs.OptionalType;
 import VehicleType.Vehicle;
 
 public class ATTIVADecorator extends VehicleDecorator {
@@ -8,6 +9,11 @@ public class ATTIVADecorator extends VehicleDecorator {
 	public ATTIVADecorator(Vehicle car) {
 		super(car);
 		// TODO Auto-generated constructor stub
+		car.optionals.removeAll(optionals);
+		car.optionalsName.removeAll(optionalsName);
+		car.addOptional(new Optional(OptionalType.headlight,300,"Fari Xenon"));
+		car.addOptional(new Optional(OptionalType.interior,500,"Interni camoscio"));
+		optionalsName.addAll("Fari Xenon","Interni in camoscio");
 	}
 
 	@Override
@@ -17,7 +23,7 @@ public class ATTIVADecorator extends VehicleDecorator {
 
 	@Override
 	public boolean addOptional(Optional o) {
-		return car.addOptional(o);
+		return true;
 	}
 
 	@Override
