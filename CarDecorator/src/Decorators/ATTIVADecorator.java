@@ -8,7 +8,6 @@ public class ATTIVADecorator extends VehicleDecorator {
 
 	public ATTIVADecorator(Vehicle car) {
 		super(car);
-		// TODO Auto-generated constructor stub
 		car.optionals.removeAll(optionals);
 		car.optionalsName.removeAll(optionalsName);
 		car.addOptional(new Optional(OptionalType.headlight,300,"Fari Xenon"));

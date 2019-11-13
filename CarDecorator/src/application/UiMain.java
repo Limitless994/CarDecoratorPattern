@@ -8,7 +8,6 @@ import Decorators.ATTIVADecorator;
 import Decorators.ELETTADecorator;
 import Decorators.FUTURADecorator;
 import Decorators.VehicleFactory;
-import VehicleSpecs.EngineType;
 import VehicleSpecs.Optional;
 import VehicleSpecs.OptionalType;
 import VehicleType.Vehicle;
@@ -32,25 +31,15 @@ import javafx.stage.Stage;
 public class UiMain implements Initializable {
 	@FXML
 	private ImageView preview;
-
-	//	@FXML
-	//	private Label name;
-	//	@FXML
-	//	private Label displayType;
-	//	@FXML
-	//	private Label cpuType;
 	@FXML
 	private Label cost;
 	@FXML
 	private ChoiceBox<String> carSelector;
 	@FXML
 	private ChoiceBox<String> carSetup;
-
 	@FXML
 	private ListView<String> listview;
-	//	
-	//	@FXML
-	//	private ImageView diagram;
+
 
 	ObservableList<String> carList = FXCollections.observableArrayList();
 	ObservableList<String> setupList = FXCollections.observableArrayList();
@@ -79,15 +68,6 @@ public class UiMain implements Initializable {
 
 	VehicleFactory vf = VehicleFactory.getInstance();
 
-	public void showDiagram(ActionEvent e) throws IOException {
-		//		Parent root = FXMLLoader.load(getClass().getResource("/application/diag.fxml"));
-		//		Scene scene = new Scene(root,1000,700);
-		//		Stage secondaryStage = new Stage();
-		//		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-		//		secondaryStage.setScene(scene);
-		//		secondaryStage.show();
-
-	}
 	Vehicle car = null;
 
 	public void addCar(ActionEvent e) {

@@ -8,7 +8,6 @@ public class Coupe implements Vehicle {
 
 	@Override
 	public float getBaseCost() {
-		// TODO Auto-generated method stub
 		return 15000;
 	}
 	public boolean addOptional(Optional optional) {
