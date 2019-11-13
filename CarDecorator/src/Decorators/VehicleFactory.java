@@ -28,7 +28,6 @@ public class VehicleFactory {
 			return new Hatchback();
 		}
 
-
 		return null;
 	}
 	public static VehicleFactory getInstance(){
