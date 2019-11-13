@@ -8,8 +8,8 @@ public class ATTIVADecorator extends VehicleDecorator {
 
 	public ATTIVADecorator(Vehicle car) {
 		super(car);
-		car.optionals.removeAll(optionals);
-		car.optionalsName.removeAll(optionalsName);
+		Vehicle.optionals.removeAll(optionals);
+		Vehicle.optionalsName.removeAll(optionalsName);
 		car.addOptional(new Optional(OptionalType.headlight,300,"Fari Xenon"));
 		car.addOptional(new Optional(OptionalType.interior,500,"Interni camoscio"));
 		optionalsName.addAll("Fari Xenon","Interni in camoscio");

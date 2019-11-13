@@ -1,8 +1,6 @@
 package VehicleType;
 
 import VehicleSpecs.Optional;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 public class Suv implements Vehicle {
 

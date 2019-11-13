@@ -8,9 +8,8 @@ public class FUTURADecorator extends VehicleDecorator{
 
 	public FUTURADecorator(Vehicle car) {
 		super(car);
-		car.optionals.removeAll(optionals);
-		car.optionalsName.removeAll(optionalsName);
-
+		Vehicle.optionals.removeAll(optionals);
+		Vehicle.optionalsName.removeAll(optionalsName);
 		car.addOptional(new Optional(OptionalType.clima,700,"Bizona Avanti e Dietro"));
 		car.addOptional(new Optional(OptionalType.headlight,500,"Fari full led"));
 		car.addOptional(new Optional(OptionalType.stereo,1200,"Boose 7.1"));

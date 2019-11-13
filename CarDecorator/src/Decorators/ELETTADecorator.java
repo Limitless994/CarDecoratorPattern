@@ -8,8 +8,8 @@ public class ELETTADecorator extends VehicleDecorator {
 
 	public ELETTADecorator(Vehicle car) {
 		super(car);
-		car.optionals.removeAll(optionals);
-		car.optionalsName.removeAll(optionalsName);
+		Vehicle.optionals.removeAll(optionals);
+		Vehicle.optionalsName.removeAll(optionalsName);
 		car.addOptional(new Optional(OptionalType.clima,500,"Bizona Avanti e dietro"));
 		car.addOptional(new Optional(OptionalType.headlight,700,"Fari led Anteriori"));
 		car.addOptional(new Optional(OptionalType.interior,1500,"Interni in pelle"));	
