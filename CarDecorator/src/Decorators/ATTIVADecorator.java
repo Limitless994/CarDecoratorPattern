@@ -8,11 +8,7 @@ public class ATTIVADecorator extends VehicleDecorator {
 
 	public ATTIVADecorator(Vehicle car) {
 		super(car);
-		Vehicle.optionals.removeAll(optionals);
-		Vehicle.optionalsName.removeAll(optionalsName);
-		car.addOptional(new Optional(OptionalType.headlight,300,"Fari Xenon"));
-		car.addOptional(new Optional(OptionalType.interior,500,"Interni camoscio"));
-		optionalsName.addAll("Fari Xenon","Interni in camoscio");
+		addAttivaOptionals();
 	}
 
 	@Override
@@ -29,5 +25,11 @@ public class ATTIVADecorator extends VehicleDecorator {
 	public float getFullPrice() {
 		return car.getFullPrice();
 	}
-
+	public void addAttivaOptionals() {
+		Vehicle.optionals.removeAll(optionals);
+		Vehicle.optionalsName.removeAll(optionalsName);
+		car.addOptional(new Optional(OptionalType.headlight,300,"Fari Xenon"));
+		car.addOptional(new Optional(OptionalType.interior,500,"Interni premium"));
+		optionalsName.addAll("Fari Xenon","Interni premium");
+	}
 }
